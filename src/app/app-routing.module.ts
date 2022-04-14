@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 import { AboutUsComponent } from './components/landing/about-us/about-us.component';
 import { ContactsComponent } from './components/landing/contacts/contacts.component';
 import { ProfileDetailsComponent } from './components/landing/details/profile-details/profile-details.component';
@@ -17,6 +19,8 @@ const routes: Routes = [
 	{ path: 'about', component: AboutUsComponent },
 	{ path: 'contacts', component: ContactsComponent },
 	{ path: 'player/:id', component: ProfileDetailsComponent },
+	{ path: 'auth/login', component: LoginComponent },
+	{ path: 'auth/register', component: RegisterComponent }
 ];
 
 @NgModule({
