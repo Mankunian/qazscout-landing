@@ -1,0 +1,32 @@
+<div class="banner" [hidden]="isMainPage">
+	<h2><b>Новости</b></h2>
+	<p><a class="btn-link">Главная</a> | Новости</p>
+</div>
+
+<section class="section" id="news">
+	<div class="container" data-aos="fade-up">
+		<div class="section-title">
+			<h2>НОВОСТИ</h2>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-6" *ngFor="let item of newsList">
+				<div class="card shadow-sm mb-4">
+					<img [src]="item?.img" alt="" class="mb-2">
+
+					<div class="card-body">
+						<div class="d-flex justify-content-between align-items-center mt-2 mb-2 news_item__category">
+							<span>Новости</span>
+							<div class="news-item__date">
+								{{item.createdDate}}
+							</div>
+						</div>
+						<p class="news_title mb-2">{{item.title}}</p>
+						<div class="action">
+							<button routerLink="/dashboard/news/{{item.id}}" class="btn btn-md btn-primary w-100">Подробнее</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

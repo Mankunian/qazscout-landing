@@ -1,0 +1,33 @@
+.card {
+  border-radius: 3px !important;
+  img {
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-body {
+    .news_item__category {
+      span {
+        align-items: center;
+        color: #009ffd;
+        display: flex;
+        font-size: 14px;
+        font-weight: 600;
+        justify-content: space-between;
+        letter-spacing: 0.02em;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+    }
+    .news_title {
+      font-weight: 700;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .news_description {
+      color: grey;
+    }
+  }
+}

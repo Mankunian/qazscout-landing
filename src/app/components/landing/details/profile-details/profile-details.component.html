@@ -1,0 +1,268 @@
+<main id="main">
+	<div class="banner" [hidden]="isMainPage">
+		<h2><b>{{playerInfo?.fullName}}</b></h2>
+		<p><a routerLink="/" class="btn-link">Главная</a> | <a routerLink="/players" class="btn-link">Игроки</a> |
+			{{playerInfo?.fullName}}</p>
+	</div>
+
+
+
+	<section class="inner-page team">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="tab-nav">
+						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+							<!-- Профиль -->
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+									type="button" role="tab" aria-controls="pills-home" aria-selected="true">Профиль</button>
+							</li>
+							<!-- Статистика -->
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+									type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Статистика</button>
+							</li>
+							<!-- Галерея -->
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+									type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Галерея</button>
+							</li>
+							<!-- Видео -->
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+									type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Видео</button>
+							</li>
+							<!-- Отзывы -->
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+									type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Отзывы</button>
+							</li>
+							<!-- Подписчики -->
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+									type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Подписчики</button>
+							</li>
+						</ul>
+						<div class="tab-content" id="pills-tabContent">
+							<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+								<!-- Профиль -->
+								<div class="row">
+									<!-- Player's avatar -->
+									<div class="col-lg-4 col-md-6">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="section-bg">
+													<div class="member">
+														<div class="pic"><img [src]="playerInfo?.img" class="img-fluid" alt=""></div>
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-lg-12 portfolio-details">
+												<mat-card>
+													<!-- Гражданство -->
+													<mat-form-field appearance="outline">
+														<mat-label>Гражданство</mat-label>
+														<input disabled="true" matInput value="Казахстан">
+													</mat-form-field>
+													<!-- Дата рождения -->
+													<mat-form-field appearance="outline">
+														<mat-label>Дата рождения</mat-label>
+														<input disabled="true" matInput value="20/01/1993">
+													</mat-form-field>
+													<!-- Место рождения -->
+													<mat-form-field appearance="outline">
+														<mat-label>Место рождения</mat-label>
+														<input disabled="true" matInput value="г.Алматы">
+													</mat-form-field>
+												</mat-card>
+											</div>
+										</div>
+
+										<div class="row mt-2 mb-2">
+											<div class="col-lg-12 social-links">
+												<mat-card>
+													<div class="social">
+														<a href=""><i class="bi bi-twitter"></i></a>
+														<a href=""><i class="bi bi-facebook"></i></a>
+														<a href=""><i class="bi bi-instagram"></i></a>
+														<a href=""><i class="bi bi-linkedin"></i></a>
+													</div>
+												</mat-card>
+											</div>
+										</div>
+									</div>
+									<!-- Player's bio -->
+									<div class="col-lg-8 col-md-12">
+										<div class="row">
+											<!-- Header title -->
+											<div class="col-lg-12">
+												<mat-card>
+													<div class="row">
+														<div class="col-lg-12">
+															<div class="header">
+																<h3>{{playerInfo?.fullName}}</h3>
+																<span class="fst-italic fw-bold">
+																	Просмотры: 243 <br>
+																	Подписчики: 100
+																</span>
+															</div>
+														</div>
+													</div>
+
+													<div class="row mt-2">
+														<!-- Description -->
+														<div class="col-lg-6">
+															<h3 class="fst-italic fw-bold">Биография</h3>
+															<p>
+																Бауыржа́н Ербосы́нович Исламха́н — казахстанский футболист, полузащитник, бывший капитан
+																сборной
+																Казахстана. 6-кратный вице-чемпион Казахстана и 4-кратный обладатель Кубка страны.
+															</p>
+															<!-- Регион -->
+															<mat-form-field appearance="outline">
+																<mat-label>Регион</mat-label>
+																<input disabled="true" matInput value="г.Астана">
+															</mat-form-field>
+															<!-- Турнир -->
+															<mat-form-field appearance="outline">
+																<mat-label>Турнир</mat-label>
+																<input disabled="true" matInput value="ЛЛФ">
+															</mat-form-field>
+															<!-- Лига -->
+															<mat-form-field appearance="outline">
+																<mat-label>Лига</mat-label>
+																<input disabled="true" matInput value="Лига D">
+															</mat-form-field>
+															<!-- Команда -->
+															<mat-form-field appearance="outline">
+																<mat-label>Команда</mat-label>
+																<input disabled="true" matInput value="Shaurma food">
+															</mat-form-field>
+
+
+
+
+														</div>
+														<!-- Positions on field svg -->
+														<div class="col-lg-6">
+															<div class="football_field border position-relative">
+																<div class="gk">
+																	<div class="round">
+																		<input type="checkbox" id="gk" />
+																		<label for="gk">GK</label>
+																	</div>
+																</div>
+																<div class="lb">
+																	<div class="round">
+																		<input type="checkbox" id="lb" />
+																		<label for="lb">LB</label>
+																	</div>
+
+																</div>
+																<div class="cb">
+																	<div class="round">
+																		<input type="checkbox" id="cb" />
+																		<label for="cb">CB</label>
+																	</div>
+																</div>
+																<div class="rb">
+																	<div class="round">
+																		<input type="checkbox" id="rb" />
+																		<label for="rb">RB</label>
+																	</div>
+																</div>
+																<div class="dm">
+																	<div class="round">
+																		<input type="checkbox" checked id="dm" />
+																		<label for="dm">DM</label>
+																	</div>
+																</div>
+																<div class="cm">
+																	<div class="round">
+																		<input type="checkbox" checked id="cm" />
+																		<label for="cm">CM</label>
+																	</div>
+																</div>
+																<div class="rm">
+																	<div class="round">
+																		<input type="checkbox" id="rm" />
+																		<label for="rm">RM</label>
+																	</div>
+																</div>
+																<div class="lm">
+																	<div class="round">
+																		<input type="checkbox" id="lm" />
+																		<label for="lm">LM</label>
+																	</div>
+																</div>
+																<div class="am">
+																	<div class="round">
+																		<input type="checkbox" id="am" />
+																		<label for="am">AM</label>
+																	</div>
+																</div>
+																<div class="rw">
+																	<div class="round">
+																		<input type="checkbox" id="rw" />
+																		<label for="rw">RW</label>
+																	</div>
+																</div>
+																<div class="lw">
+																	<div class="round">
+																		<input type="checkbox" id="lw" />
+																		<label for="lw">LW</label>
+																	</div>
+																</div>
+																<div class="st">
+																	<div class="round">
+																		<input type="checkbox" id="st" />
+																		<label for="st">ST</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="row mt-2">
+														<div class="col-lg-6">
+															<h3 class="fst-italic fw-bold">Сильные стороны</h3>
+															<p>
+																Playing both feet / Excellent dribbling / Very good and strong shoot / Feintes / Very
+																good ball
+																control / Very interesting speed with and without ball / Good heading / Very good
+																passing and
+																crossing / Goalscorer / Assists maker / Good 1vs1 / Good in the box / Vivacity and
+																agility
+															</p>
+														</div>
+														<div class="col-lg-6">
+															<h3 class="fst-italic fw-bold">Слабые стороны</h3>
+															<p>
+																Psychological resistance
+															</p>
+														</div>
+													</div>
+												</mat-card>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...
+							</div>
+							<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+</main>

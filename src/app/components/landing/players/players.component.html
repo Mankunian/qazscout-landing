@@ -1,0 +1,36 @@
+<div class="banner" [hidden]="isMainPage">
+	<h2><b>Игроки</b></h2>
+	<p><a class="btn-link">Главная</a> | Игроки</p>
+</div>
+
+
+<section id="players" class="team">
+	<div class="container" data-aos="fade-up">
+
+		<div class="section-title">
+			<h2>СВОБОДНЫЕ АГЕНТЫ</h2>
+			<!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.</p> -->
+		</div>
+
+		<div class="row">
+			<div *ngFor="let player of players" class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up"
+				routerLink="/player/{{player.id}}">
+				<div class="member">
+					<div class="pic"><img [src]="player.img" class="img-fluid" alt=""></div>
+					<div class="member-info">
+						<h4>{{player.fullName}}</h4>
+						<span>{{player.position.name}}</span>
+						<div class="social">
+							<a href=""><i class="bi bi-twitter"></i></a>
+							<a href=""><i class="bi bi-facebook"></i></a>
+							<a href=""><i class="bi bi-instagram"></i></a>
+							<a href=""><i class="bi bi-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</section>
