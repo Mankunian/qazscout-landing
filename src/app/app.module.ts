@@ -23,6 +23,8 @@ import { MaterialModule } from './modules/material.module';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { MainComponent } from './components/landing/main/main.component';
+import { MyProfileComponent } from './components/landing/my-profile/my-profile.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
 	declarations: [
@@ -42,7 +44,8 @@ import { MainComponent } from './components/landing/main/main.component';
 		ContactsComponent,
 		LoginComponent,
 		RegisterComponent,
-  MainComponent,
+		MainComponent,
+		MyProfileComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -52,7 +55,7 @@ import { MainComponent } from './components/landing/main/main.component';
 		MaterialModule,
 		ReactiveFormsModule
 	],
-	providers: [],
+	providers: [AuthService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

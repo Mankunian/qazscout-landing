@@ -8,10 +8,19 @@
 			<a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
 		</div>
 		<div class="contact-info d-flex align-items-center">
-			<!-- <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@example.com</a> -->
-			<!-- <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55 -->
-			<span routerLink="/auth/login" style="margin: 0 1em;"><i class="bi bi-person-fill"></i>Личный кабинет</span>
-			<span routerLink="/auth/register"><i class="bi bi-box-arrow-in-right"></i>Регистрация</span>
+			<span routerLink="/auth/login" style="margin: 0 1em;">
+				<i class="bi bi-person-fill"></i>
+				<span *ngIf="!isCurrentUser">Личный кабинет</span>
+				<span *ngIf="isCurrentUser">
+					{{isCurrentUser.lastname}} {{isCurrentUser.firstname}}
+				</span>
+			</span>
+			<span *ngIf="!isCurrentUser" routerLink="/auth/register">
+				<i class="bi bi-box-arrow-in-right"></i>Регистрация
+			</span>
+
+			<span *ngIf="isCurrentUser" routerLink="/auth/login">
+				<i class="bi bi-box-arrow-in-left"></i>Выйти</span>
 		</div>
 
 	</div>

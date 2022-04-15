@@ -34,12 +34,12 @@ export class LoginComponent implements OnInit {
 			})
 
 			this.tokenStorageService.saveUser(user);
-			// if (user) {
-			// 	this.loginForm.reset();
-			// 	this.router.navigate(['/dashboard/home']);
-			// } else {
-			// 	alert("Пользователь не существует")
-			// }
+			if (user) {
+				this.loginForm.reset();
+				this.router.navigate(['/main/my-profile']);
+			} else {
+				alert("Пользователь не существует")
+			}
 		})
 	}
 

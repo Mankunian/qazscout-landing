@@ -8,6 +8,7 @@ import { ContactsComponent } from './components/landing/contacts/contacts.compon
 import { ProfileDetailsComponent } from './components/landing/details/profile-details/profile-details.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { MainComponent } from './components/landing/main/main.component';
+import { MyProfileComponent } from './components/landing/my-profile/my-profile.component';
 import { NewsComponent } from './components/landing/news/news.component';
 import { PlayersComponent } from './components/landing/players/players.component';
 import { ScoutsManagersComponent } from './components/landing/scouts-managers/scouts-managers.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
 			{ path: 'about', component: AboutUsComponent },
 			{ path: 'contacts', component: ContactsComponent },
 			{ path: 'player/:id', component: ProfileDetailsComponent },
+			{ path: 'my-profile', component: MyProfileComponent }
 		]
 	},
 	{ path: '', redirectTo: "/main", pathMatch: "full" },
