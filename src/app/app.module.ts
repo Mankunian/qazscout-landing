@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
@@ -38,15 +39,16 @@ import { RegisterComponent } from './components/auth/register/register.component
 		ProfileDetailsComponent,
 		NewsDetailsComponent,
 		ContactsComponent,
-  LoginComponent,
-  RegisterComponent,
+		LoginComponent,
+		RegisterComponent,
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		HttpClientModule,
 		BrowserAnimationsModule,
-		MaterialModule
+		MaterialModule,
+		ReactiveFormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

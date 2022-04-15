@@ -12,13 +12,17 @@ import { PlayersComponent } from './components/landing/players/players.component
 import { ScoutsManagersComponent } from './components/landing/scouts-managers/scouts-managers.component';
 
 const routes: Routes = [
-	{ path: '', component: LandingComponent },
-	{ path: 'players', component: PlayersComponent },
-	{ path: 'scouts', component: ScoutsManagersComponent },
-	{ path: 'news', component: NewsComponent },
-	{ path: 'about', component: AboutUsComponent },
-	{ path: 'contacts', component: ContactsComponent },
-	{ path: 'player/:id', component: ProfileDetailsComponent },
+	{
+		path: '', component: LandingComponent, children: [
+			{ path: 'players', component: PlayersComponent },
+			{ path: 'scouts', component: ScoutsManagersComponent },
+			{ path: 'news', component: NewsComponent },
+			{ path: 'about', component: AboutUsComponent },
+			{ path: 'contacts', component: ContactsComponent },
+			{ path: 'player/:id', component: ProfileDetailsComponent },
+		]
+	},
+
 	{ path: 'auth/login', component: LoginComponent },
 	{ path: 'auth/register', component: RegisterComponent }
 ];
