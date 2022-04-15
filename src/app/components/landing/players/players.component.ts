@@ -16,7 +16,7 @@ export class PlayersComponent implements OnInit {
 		private router: Router
 	) {
 		console.log(router.url)
-		if (router.url == '/') this.isMainPage = true;
+		if (router.url == '/main') this.isMainPage = true;
 	}
 
 	ngOnInit(): void {

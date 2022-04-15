@@ -11,7 +11,7 @@ export class ContactsComponent implements OnInit {
 	constructor(
 		private router: Router
 	) {
-		if (this.router.url == '/') this.isMainPage = true;
+		if (this.router.url == '/main') this.isMainPage = true;
 	}
 
 	ngOnInit(): void {

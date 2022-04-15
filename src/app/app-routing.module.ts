@@ -7,13 +7,15 @@ import { AboutUsComponent } from './components/landing/about-us/about-us.compone
 import { ContactsComponent } from './components/landing/contacts/contacts.component';
 import { ProfileDetailsComponent } from './components/landing/details/profile-details/profile-details.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { MainComponent } from './components/landing/main/main.component';
 import { NewsComponent } from './components/landing/news/news.component';
 import { PlayersComponent } from './components/landing/players/players.component';
 import { ScoutsManagersComponent } from './components/landing/scouts-managers/scouts-managers.component';
 
 const routes: Routes = [
 	{
-		path: '', component: LandingComponent, children: [
+		path: 'main', component: LandingComponent, children: [
+			{ path: '', component: MainComponent },
 			{ path: 'players', component: PlayersComponent },
 			{ path: 'scouts', component: ScoutsManagersComponent },
 			{ path: 'news', component: NewsComponent },
@@ -22,7 +24,7 @@ const routes: Routes = [
 			{ path: 'player/:id', component: ProfileDetailsComponent },
 		]
 	},
-
+	{ path: '', redirectTo: "/main", pathMatch: "full" },
 	{ path: 'auth/login', component: LoginComponent },
 	{ path: 'auth/register', component: RegisterComponent }
 ];

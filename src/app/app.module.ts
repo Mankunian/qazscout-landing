@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material.module';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { MainComponent } from './components/landing/main/main.component';
 
 @NgModule({
 	declarations: [
@@ -41,6 +42,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 		ContactsComponent,
 		LoginComponent,
 		RegisterComponent,
+  MainComponent,
 	],
 	imports: [
 		BrowserModule,

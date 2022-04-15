@@ -1,8 +1,10 @@
 .section-bg {
 	color: #fff;
-	filter: grayscale(70%);
-	background: url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=993&q=80") no-repeat;
+	/* filter: grayscale(70%); */
+	background: linear-gradient(grey, grey), url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=993&q=80") no-repeat;
 	background-size: cover;
+	background-blend-mode: saturation;
+
 	background-position: top;
 	text-align: center;
 	padding: 70px 0;
